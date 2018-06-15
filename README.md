@@ -20,10 +20,10 @@ to an AWS VPC.
 
 (First time you download the repo, you'll have to run "terraform init")
 
-Usage: ./run <terraform_operation> <aws_access_key> <aws_secret_key> <server_count>
+* Usage: ./run <terraform_operation> <aws_access_key> <aws_secret_key> <server_count>
 
-e.g:    ./run apply <aws_access_key> <aws_secret_key> 2
-	./run destroy <aws_access_key> <aws_secret_key> 2
+* e.g(terraform apply):    ./run apply <aws_access_key> <aws_secret_key> 2
+* e.g(terraform destroy):	./run destroy <aws_access_key> <aws_secret_key> 2
 
 
 ## Notes
