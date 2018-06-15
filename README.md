@@ -30,7 +30,7 @@ to an AWS VPC.
 
 * 3 different subnets are defined in aws_servers.tf, if we want to create more than 3 servers this bit must be modified to support it.
 * The repository includes a dummy java app  into the chef directory that gets deployed in provisioning time with the instance and the chef-solo code.
-* No downtime should happen when adding or removing instances, although to improve provisioning timings the app should be externalized (eg. a Nexus server or the image itself). The downtime is avoided by the terraform flag create_before_destroy and the previsioning health_check.sh that checks the java app is running before the instance gets tagged as created.
-* WARNING - Running the script with 3 servers and then running it again with 2 will trigger a current terraform bug.
+* No downtime should happen when adding or removing instances, although to improve provisioning timings the app should be externalized (eg. a Nexus server or the image itself). The downtime is avoided by the terraform flag create_before_destroy and the provisioning health_check.sh that checks the java app is running before the instance gets tagged as created.
+* WARNING - Running the script with 3 servers and then running it again with 2 will trigger a current terraform bug: https://github.com/hashicorp/terraform/issues/18261
 
 
